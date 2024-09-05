@@ -11,6 +11,17 @@ for i in range(0, 11):
 
 ```
 
+<details>
+  <summary>Click to see the answer</summary>
+
+```js
+for (let i = 0; i < 11; i++) {
+  if (i % 2 === 0) console.log(i);
+}
+```
+
+</details>
+
 2. Java
 
 ```java
