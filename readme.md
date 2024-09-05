@@ -32,6 +32,19 @@ for (int i = 1; i <= 5; i++) {
 System.out.println(sum);
 ```
 
+<details>
+  <summary>Click to see the answer</summary>
+
+```js
+let sum = 0;
+for (let i = 1; i <= 5; i++) {
+  sum += i;
+}
+console.log(sum);
+```
+
+</details>
+
 3. Python isPrime
 
 ```python
@@ -44,6 +57,27 @@ System.out.println(sum);
 
 print(is_prime(11))
 ```
+
+<details>
+  <summary>Click to see the answer</summary>
+
+```js
+function isPrime(num) {
+  if (num < 2) {
+    return false;
+  }
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+console.log(isPrime(11));
+```
+
+</details>
 
 4. Java
 
@@ -58,6 +92,24 @@ for (int i = 1; i < numbers.length; i++) {
 }
 System.out.println("Largest number is: " + max);
 ```
+
+<details>
+  <summary>Click to see the answer</summary>
+
+```js
+let numbers = [4, 2, 8, 6, 1];
+let max = numbers[0];
+
+for (let i = 1; i < numbers.length; i++) {
+  if (numbers[i] > max) {
+    max = numbers[i];
+  }
+}
+
+console.log("Largest number is: " + max);
+```
+
+</details>
 
 5. Go
 
@@ -86,6 +138,26 @@ func main() {
 
 ```
 
+<details>
+  <summary>Click to see the answer</summary>
+
+```js
+function halvingSum(n) {
+  let sum = n;
+  let num = n;
+  while (num > 0) {
+    console.log(num);
+    num = Math.floor(num / 2); // Integer division in JavaScript
+    sum += num;
+  }
+  return sum;
+}
+
+const res = halvingSum(25);
+console.log(res);
+```
+
+</details>
 6. Java
 
 ```java
@@ -143,6 +215,65 @@ public static void calculateStatistics(int[] numbers) {
 
 ```
 
+<details>
+  <summary>Click to see the answer</summary>
+
+```js
+function main() {
+  let numbers = [5, 3, 8, 2, 7, 10];
+  calculateStatistics(numbers);
+}
+
+function calculateStatistics(numbers) {
+  if (numbers.length === 0) {
+    console.log("No numbers provided.");
+    return;
+  }
+
+  // Calculate sum
+  let sum = 0;
+  for (let num of numbers) {
+    sum += num;
+  }
+
+  // Calculate average
+  let average = sum / numbers.length;
+
+  // Calculate max and min
+  let max = numbers[0];
+  let min = numbers[0];
+  for (let num of numbers) {
+    if (num > max) {
+      max = num;
+    }
+    if (num < min) {
+      min = num;
+    }
+  }
+
+  // Calculate median
+  numbers.sort((a, b) => a - b); // Sort the array
+  let median;
+  if (numbers.length % 2 === 0) {
+    median =
+      (numbers[numbers.length / 2 - 1] + numbers[numbers.length / 2]) / 2;
+  } else {
+    median = numbers[Math.floor(numbers.length / 2)];
+  }
+
+  // Print the results
+  console.log("Sum: " + sum);
+  console.log("Average: " + average);
+  console.log("Max: " + max);
+  console.log("Min: " + min);
+  console.log("Median: " + median);
+}
+
+// Run the main function to test
+main();
+```
+
+</details>
 7. Python
 
 ```python
@@ -190,6 +321,66 @@ def manage_tasks():
 manage_tasks()
 ```
 
+<details>
+  <summary>Click to see the answer</summary>
+
+```js
+function manageTasks() {
+  let tasks = [];
+
+  function addTask(task) {
+    tasks.push({ task: task, done: false });
+    console.log(`Task "${task}" added.`);
+  }
+
+  function removeTask(task) {
+    for (let i = 0; i < tasks.length; i++) {
+      if (tasks[i].task === task) {
+        tasks.splice(i, 1); // Remove the task from the array
+        console.log(`Task "${task}" removed.`);
+        return;
+      }
+    }
+    console.log(`Task "${task}" not found.`);
+  }
+
+  function listTasks() {
+    if (tasks.length > 0) {
+      tasks.forEach((t, i) => {
+        let status = t.done ? "done" : "not done";
+        console.log(`${i + 1}. ${t.task} - ${status}`);
+      });
+    } else {
+      console.log("No tasks in the list.");
+    }
+  }
+
+  function markDone(task) {
+    for (let i = 0; i < tasks.length; i++) {
+      if (tasks[i].task === task) {
+        tasks[i].done = true;
+        console.log(`Task "${task}" marked as done.`);
+        return;
+      }
+    }
+    console.log(`Task "${task}" not found.`);
+  }
+
+  // Simulate some operations
+  addTask("Buy groceries");
+  addTask("Clean room");
+  listTasks();
+  markDone("Buy groceries");
+  listTasks();
+  removeTask("Clean room");
+  listTasks();
+}
+
+// Call the function to simulate task management
+manageTasks();
+```
+
+</details>
 8. Java
 
 ```java
@@ -215,3 +406,29 @@ public class Main {
 }
 
 ```
+
+<details>
+  <summary>Click to see the answer</summary>
+
+```js
+class Car {
+  constructor(model, year) {
+    this.model = model;
+    this.year = year;
+  }
+
+  displayInfo() {
+    console.log(`Model: ${this.model}, Year: ${this.year}`);
+  }
+}
+
+const main = () => {
+  const car1 = new Car("Toyota", 2020);
+  car1.displayInfo();
+};
+
+// Call the main function
+main();
+```
+
+</details>
