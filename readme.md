@@ -1,8 +1,8 @@
 # Language Translation
 
-Convert the code below into JavaScript
+Convert the code below into JavaScript. Compare the patterns you see to what you know in JavaScript in order to make that translation.
 
-1. Python
+**1. Python**
 
 ```python
 for i in range(0, 11):
@@ -22,7 +22,7 @@ for (let i = 0; i < 11; i++) {
 
 </details>
 
-2. Java
+**2. Java**
 
 ```java
 int sum = 0;
@@ -45,7 +45,7 @@ console.log(sum);
 
 </details>
 
-3. Python isPrime
+**3. Python isPrime**
 
 ```python
     if num < 2:
@@ -79,7 +79,7 @@ console.log(isPrime(11));
 
 </details>
 
-4. Java
+**4. Java**
 
 ```java
 int[] numbers = {4, 2, 8, 6, 1};
@@ -111,7 +111,7 @@ console.log("Largest number is: " + max);
 
 </details>
 
-5. Go
+**5. Go**
 
 ```golang
 package main
@@ -158,7 +158,8 @@ console.log(res);
 ```
 
 </details>
-6. Java
+
+**6. Java**
 
 ```java
 // Function to calculate statistics: sum, average, max, min, and median from an array of numbers
@@ -274,7 +275,8 @@ main();
 ```
 
 </details>
-7. Python
+
+**7. Python**
 
 ```python
 def manage_tasks():
@@ -381,7 +383,8 @@ manageTasks();
 ```
 
 </details>
-8. Java
+
+**8. Java**
 
 ```java
 class Car {
