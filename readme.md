@@ -123,7 +123,7 @@ System.out.println("Largest number is: " + max);
 
 <details>
   <summary>Click to see the answer</summary>
-js
+
 ```js
 let numbers = [4, 2, 8, 6, 1];
 let max = numbers[0];
@@ -136,7 +136,7 @@ for (let i = 1; i < numbers.length; i++) {
 
 console.log("Largest number is: " + max);
 ```
-ruby
+
 ```ruby
 numbers = [4, 2, 8, 6, 1]
 max = numbers[0]
