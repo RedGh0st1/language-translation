@@ -13,13 +13,13 @@ for i in range(0, 11):
 
 <details>
   <summary>Click to see the answer</summary>
-
+js
 ```js
 for (let i = 0; i < 11; i++) {
   if (i % 2 === 0) console.log(i);
 }
 ```
-
+ruby
 ```ruby
 for i in 0..10
   if i.even?
@@ -42,7 +42,7 @@ System.out.println(sum);
 
 <details>
   <summary>Click to see the answer</summary>
-
+js
 ```js
 let sum = 0;
 for (let i = 1; i <= 5; i++) {
@@ -50,6 +50,7 @@ for (let i = 1; i <= 5; i++) {
 }
 console.log(sum);
 ```
+ruby
 ```ruby
 sum = 0
 (1..5).each do |i|
@@ -75,7 +76,7 @@ print(is_prime(11))
 
 <details>
   <summary>Click to see the answer</summary>
-
+js
 ```js
 function isPrime(num) {
   if (num < 2) {
@@ -91,6 +92,7 @@ function isPrime(num) {
 
 console.log(isPrime(11));
 ```
+ruby
 ```ruby
 def is_prime(num)
   return false if num < 2
@@ -121,7 +123,7 @@ System.out.println("Largest number is: " + max);
 
 <details>
   <summary>Click to see the answer</summary>
-
+js
 ```js
 let numbers = [4, 2, 8, 6, 1];
 let max = numbers[0];
@@ -134,6 +136,7 @@ for (let i = 1; i < numbers.length; i++) {
 
 console.log("Largest number is: " + max);
 ```
+ruby
 ```ruby
 numbers = [4, 2, 8, 6, 1]
 max = numbers[0]
