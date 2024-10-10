@@ -20,6 +20,14 @@ for (let i = 0; i < 11; i++) {
 }
 ```
 
+```ruby
+for i in 0..10
+  if i.even?
+    puts i
+  end
+end
+```
+
 </details>
 
 **2. Java**
@@ -41,6 +49,13 @@ for (let i = 1; i <= 5; i++) {
   sum += i;
 }
 console.log(sum);
+```
+```ruby
+sum = 0
+(1..5).each do |i|
+  sum += i
+end
+puts sum
 ```
 
 </details>
@@ -76,6 +91,17 @@ function isPrime(num) {
 
 console.log(isPrime(11));
 ```
+```ruby
+def is_prime(num)
+  return false if num < 2
+  (2...num).each do |i|
+    return false if num % i == 0
+  end
+  true
+end
+
+puts is_prime(11)
+```
 
 </details>
 
@@ -107,6 +133,16 @@ for (let i = 1; i < numbers.length; i++) {
 }
 
 console.log("Largest number is: " + max);
+```
+```ruby
+numbers = [4, 2, 8, 6, 1]
+max = numbers[0]
+
+numbers[1..-1].each do |num|
+  max = num if num > max
+end
+
+puts "Largest number is: #{max}"
 ```
 
 </details>
@@ -155,6 +191,21 @@ function halvingSum(n) {
 
 const res = halvingSum(25);
 console.log(res);
+```
+
+```ruby
+def halving_sum(n)
+  sum = n
+  num = n
+  while num > 0
+    puts num
+    num /= 2
+    sum += num
+  end
+  sum
+end
+
+puts halving_sum(25)
 ```
 
 </details>
@@ -273,7 +324,35 @@ function calculateStatistics(numbers) {
 // Run the main function to test
 main();
 ```
+```ruby
+def calculate_statistics(numbers)
+  if numbers.empty?
+    puts "No numbers provided."
+    return
+  end
 
+  sum = numbers.sum
+  average = sum.to_f / numbers.length
+  max = numbers.max
+  min = numbers.min
+
+  sorted_numbers = numbers.sort
+  median = if sorted_numbers.length.even?
+             (sorted_numbers[sorted_numbers.length / 2 - 1] + sorted_numbers[sorted_numbers.length / 2]) / 2.0
+           else
+             sorted_numbers[sorted_numbers.length / 2]
+           end
+
+  puts "Sum: #{sum}"
+  puts "Average: #{average}"
+  puts "Max: #{max}"
+  puts "Min: #{min}"
+  puts "Median: #{median}"
+end
+
+numbers = [5, 3, 8, 2, 7, 10]
+calculate_statistics(numbers)
+```
 </details>
 
 **7. Python**
@@ -382,6 +461,50 @@ function manageTasks() {
 manageTasks();
 ```
 
+```ruby
+def manage_tasks
+  tasks = []
+
+  add_task = ->(task) {
+    tasks << {task: task, done: false}
+    puts "Task \"#{task}\" added."
+  }
+
+  remove_task = ->(task) {
+    tasks.reject! { |t| t[:task] == task }
+    puts "Task \"#{task}\" removed."
+  }
+
+  list_tasks = -> {
+    if tasks.empty?
+      puts "No tasks in the list."
+    else
+      tasks.each_with_index do |t, i|
+        status = t[:done] ? "done" : "not done"
+        puts "#{i + 1}. #{t[:task]} - #{status}"
+      end
+    end
+  }
+
+  mark_done = ->(task) {
+    task_item = tasks.find { |t| t[:task] == task }
+    task_item[:done] = true if task_item
+    puts "Task \"#{task}\" marked as done."
+  }
+
+  # Simulate some operations
+  add_task.call("Buy groceries")
+  add_task.call("Clean room")
+  list_tasks.call
+  mark_done.call("Buy groceries")
+  list_tasks.call
+  remove_task.call("Clean room")
+  list_tasks.call
+end
+
+manage_tasks
+```
+
 </details>
 
 **8. Java**
@@ -407,7 +530,6 @@ public class Main {
         car1.displayInfo();
     }
 }
-
 ```
 
 <details>
@@ -434,4 +556,19 @@ const main = () => {
 main();
 ```
 
+```ruby
+class Car
+  def initialize(model, year)
+    @model = model
+    @year = year
+  end
+
+  def display_info
+    puts "Model: #{@model}, Year: #{@year}"
+  end
+end
+
+car1 = Car.new("Toyota", 2020)
+car1.display_info
+```
 </details>
