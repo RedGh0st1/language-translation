@@ -1,6 +1,6 @@
 # Language Translation
 
-Convert the code below into JavaScript. Compare the patterns you see to what you know in JavaScript in order to make that translation.
+Convert the code below into JavaScript and Ruby. Compare the patterns you see to what you know in JavaScript in order to make that translation.
 
 **1. Python**
 
@@ -13,7 +13,7 @@ for i in range(0, 11):
 
 <details>
   <summary>Click to see the answer</summary>
-js
+
 ```js
 for (let i = 0; i < 11; i++) {
   if (i % 2 === 0) console.log(i);
@@ -42,7 +42,7 @@ System.out.println(sum);
 
 <details>
   <summary>Click to see the answer</summary>
-js
+
 ```js
 let sum = 0;
 for (let i = 1; i <= 5; i++) {
@@ -50,7 +50,7 @@ for (let i = 1; i <= 5; i++) {
 }
 console.log(sum);
 ```
-ruby
+
 ```ruby
 sum = 0
 (1..5).each do |i|
@@ -76,7 +76,7 @@ print(is_prime(11))
 
 <details>
   <summary>Click to see the answer</summary>
-js
+
 ```js
 function isPrime(num) {
   if (num < 2) {
@@ -92,7 +92,7 @@ function isPrime(num) {
 
 console.log(isPrime(11));
 ```
-ruby
+
 ```ruby
 def is_prime(num)
   return false if num < 2
